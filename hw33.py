@@ -99,7 +99,7 @@ def useWay(word):
 def translate(phrase: str) -> str:
     """
     Returns the pig latin equivalent of a phrase
-    :param phrase: Phrase in english, words separated by phrases
+    :param phrase: Phrase in english, words separated by spaces
     :return: Pig Latin equivalent of phrase
 
     >>> translate('What are the rules of Pig Latin?')
@@ -120,3 +120,9 @@ def translate(phrase: str) -> str:
         end = "way" if useWay(beg + y[:beginning]) else "ay"
         translated.append(beg + y[:beginning] + end)
     return movePuntToEnd(" ".join(translated))
+
+
+print(translate("What's, the weather?"))
+
+import doctest
+doctest.testmod()

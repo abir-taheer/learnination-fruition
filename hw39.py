@@ -1,4 +1,5 @@
-# Abir Taheer
+# Team Aby Ideas
+# Abir Taheer & Asma Berri
 # IntroCS pd1
 # HW39 -- Removal Three Ways
 # 2019-04-12
@@ -44,7 +45,7 @@ DEL: Removes an item at a given index or index range.
 syntax: del [1, 2, 3][0] -> [2, 3]
 behavior: Affects the original list. Does not return the item that was removed
 
-Shweet prefers del for use in rmNegatives() because we do not need the removed item in this given scenario so it doesn't make sense to use pop in favor of delete. 
+Aby Ideas prefers del for use in rmNegatives() because we do not need the removed item in this given scenario so it doesn't make sense to use pop in favor of delete.
 """
 
 

@@ -4,7 +4,7 @@
 # 2019-04-04   
 
 
-def min_pos(L: int[]) -> int:
+def min_pos(L: []) -> int:
     """
     Find the index of the smallest item in a list
     :param L: An integer list to find the minimum of

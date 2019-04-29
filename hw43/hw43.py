@@ -82,7 +82,7 @@ print(find_largest_product(num_given, 13))
 # --------------------- Problem 22 ---------------------
 
 # Get the file with the names
-names = open("hw43/p022_names.txt", "r").read()
+names = open("p022_names.txt", "r").read()
 
 # Split all of the names by commas
 names = names.split(",")
@@ -130,3 +130,61 @@ def get_total_points(list_names: list) -> int:
 
 
 print(get_total_points(names))
+
+
+# --------------------- Problem 4 ----------------------
+def check_Pal(product):
+    """
+    A function that checks if a value is a palindrome.
+    >>> check_Pal(505)
+    True
+
+    >>> check_Pal(70700)
+    False
+
+    >>> check_Pal(700000000071)
+    False
+
+    >>> check_Pal(4343434)
+    True
+    """
+    return str(product) == (str(product)[::-1])
+    # check if the forward reading of the product is the same as the backward reading
+
+
+def palindrome3():
+    """
+    A function that finds the largest palindrome made from the product of two
+    3-digit numbers..
+
+    >>> palindrome3()
+    906609 = 913 x 993
+    """
+    # current maximum palindrome
+    max_pal = 0
+
+    # the factors that result in the above product
+    factor1 = 0
+    factor2 = 0
+
+    # for every value from 999 through 100 (inclusive) and...
+    for x in range(999, 99, -1):
+
+        # for every value from 999 through x+1 (inclusive)
+        for y in range(999, x, -1):
+
+            # store the product as x times y
+            product = x * y
+
+            # check if the product is a palindrome and
+            # check if the product is greater than the prev largest palindrome
+            if check_Pal(product) and product > max_pal:
+                # store the current maximum palindrome as this product
+                max_pal = product
+
+                # store the factors as x and y
+                factor1 = x
+                factor2 = y
+
+    # print the maximum palindrome found in the following format
+    print(max_pal, '=', factor1, 'x', factor2)

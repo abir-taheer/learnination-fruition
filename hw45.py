@@ -69,7 +69,7 @@ adverbs = ['hungrily', 'quickly', 'smartly', 'cunningly', 'secretly', 'deftly', 
 
 
 full_story = "Today I went to the zoo. I saw a <adjective> <noun> jumping up and down in its tree. He " \
-             "<verb> <adverb> through the large tunnel <adjective> <noun> . I got some peanuts" \
+             "<verb> <adverb> through the large tunnel <adjective> <noun>. I got some peanuts" \
              " and passed them through the case to a gigantic gray <noun> towering above my head. " \
              "Feeding that animal made me hungry. I wet to get a <adjective> scoop of ice cream. " \
              "It filled my stomach. Afterwards I had to <verb> to catch our bus. When I got " \
@@ -95,16 +95,16 @@ def fill_blanks(story):
 
         # Depending on which type of blank of the current word, set a variable word_list equal to the appropriate
         # word bank to replace the word with
-        if word == "<noun>":
+        if "<noun>" in word:
             match = "<noun>"
             word_list = nouns
-        elif word == "<verb>":
+        elif "<verb>" in word:
             match = "<verb>"
             word_list = verbs
-        elif word == "<adjective>":
+        elif "<adjective>" in word:
             match = "<adjective>"
             word_list = adjectives
-        elif word == "<adverb>":
+        elif "<adverb>" in word:
             match = "<adverb>"
             word_list = adverbs
         else:
@@ -155,3 +155,4 @@ print(fill_blanks(full_story))
 # a cat and a house run house badly
 # they went to the cat and had cat for breakfast while cry
 # i quickly washed my red sheep before i had to eat the sweaty house
+

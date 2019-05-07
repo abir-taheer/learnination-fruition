@@ -6,7 +6,7 @@ methods = [v1, v2, v3]
 
 # Alter these variables to change the testing environment
 num_trials = 3
-num_items = 100000
+num_items = 1000
 num_possible_unique_items = 1000
 
 for trial in range(1, (num_trials + 1)):

@@ -1,0 +1,32 @@
+# Team RAATatouille - Agata Regula, Abir Taheer
+IntroCS pd1
+HW44 -- Best Laid Plans...
+2019-04-30 
+
+Mechanism for Madlibification:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The Double Loop Method:
+
+We would have variables containing lists with all of the nouns and verbs, etc. We’d loop through the input mad lib template once, first to see how many of each type of word we need. We then prompt the user for each specific type of word the number of times it appears. After doing that, we loop through the entire template again and fill it in with words from the user.
+
+The inputs would be:
+The basic string. (madlib)
+Lists made up of nouns, verbs, adjectives, adverbs, numbers, etc
+This is under the assumption that each part of speech required by the paragraph has its own list. 
+Ex. 
+    Nouns = [‘apples’, ‘dogs’, ‘pizza’]
+    Verbs = [‘run’, ‘drink’, ‘cry’]
+    Adjectives = [‘green’, ‘crazy’, ‘yummy’, ‘sleepy’]
+Something that needs to be taken under consideration is whether the word needed and provided is plural or singular. 
+The words from the list would be randomly selected and then deleted from the list as to not be repeated again. 
+
+Steps:
+1. Make counters for # of necessary verbs and nouns and etc
+2. Make variables to store the nouns, verbs, adjectives, etc from the user
+3. Use split and split up the mad lib template at all of the spaces to get a list of all of the words.
+4. Iterate through the list of all of the words.
+5. If a word’s first and last letter are opening and closing gang brackets, respectively, look at what type of filler word is needed and increment the counter for that type of word. 
+6. Prompt the user, the number of times in each counter, for each type of word and add it to the appropriate list every time.
+7. Iterate through the original list of words again and every time the gang brackets appear, choose a word from the appropriate list and replace it with the list item containing the gang brackets.
+8. Remove the item that was used from whichever list it was retrieved from to prevent duplicates and missing words.
+9. Join together the list of words from the template using the space as the separator

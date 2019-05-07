@@ -163,3 +163,5 @@ def bar_graphify(nums):
         for y in range(nums[x]):
             line += "="
         print(line)
+
+

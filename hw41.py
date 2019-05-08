@@ -4,12 +4,12 @@
 import random
 
 def rand_list(n, limit):
-	"""	return a list of n random integers on range [0,limit) """
-    g = []
-    while (n > 0):
-        g.append(random.randrange(limit))
-        n-= 1
-    return g
+        """	return a list of n random integers on range [0,limit) """
+        g = []
+        while (n > 0):
+                g.append(random.randrange(limit))
+                n-= 1
+        return g
 
 
 #==================================================
@@ -73,12 +73,12 @@ print(data)
 # don't do anything clever.
 # It should also print out the total number of loops it took to complete
 def slow_search(g, key):
-    i = 0
-    count = 0 #loop counts
+        i = 0
+        count = 0 #loop counts
     #==============
     # <<<YOUR BRILLIANT CODE HERE>>>
     #==============
-    return -1
+        return -1
 
 #print(slow_search(a, 673))
 
@@ -101,7 +101,7 @@ def slow_search(g, key):
 # Our fast search needs more information,
 # so its helper function will incorporate this extra info:
 def fast_search(g, key):
-    return fast_search_help(g, key, 0, len(g))
+        return fast_search_help(g, key, 0, len(g))
 
 
 # Here is our fast search. We are looking for key in g.
